@@ -1,4 +1,4 @@
-class rational:
+class Rational:
     def __init__(self,num,deno):
         
         if deno==0 : #Value check for denominator to not be 0
@@ -18,7 +18,7 @@ class rational:
     @staticmethod
     def LCM (n,d):# Static method for Lcm 
 
-        return (n*d) // rational.GCD(n,d) # Multiplies n and d and takes integer division by GCD function calling.
+        return (n*d) // Rational.GCD(n,d) # Multiplies n and d and takes integer division by GCD function calling.
 
 
     def __add__(self,other): # Add dunder function for method overloading for "+" operation
@@ -28,10 +28,10 @@ class rational:
         new_num=self.num * other.deno + self.deno * other.num
         new_deno=self.deno * other.deno # Multiplies deno. of self and other and stores in new_deno
 
-        cancel = rational.GCD(new_num,new_deno) # Here stores GCD in cancel variable
+        cancel = Rational.GCD(new_num,new_deno) # Here stores GCD in cancel variable
         reduced_num=new_num // cancel # Takes integer division of "new num" and "cancel" to reduce it to lowest and stores it in reduced num
         reduced_deno=new_deno // cancel # Same done for the denominator 
-        return  rational(reduced_num,reduced_deno)  
+        return  Rational(reduced_num,reduced_deno)  
     
 
     def __sub__(self,other): #Subtract dunder method for "-"
@@ -40,11 +40,11 @@ class rational:
         new_num=self.num * other.deno - self.deno * other.num
         new_deno=self.deno * other.deno
 
-        cancel = rational.GCD(new_num,new_deno)
+        cancel = Rational.GCD(new_num,new_deno)
         reduced_num=new_num // cancel
         reduced_deno=new_deno // cancel
         
-        return  rational(reduced_num,reduced_deno)
+        return  Rational(reduced_num,reduced_deno)
 
 
     def __str__(self): #String represnetation
