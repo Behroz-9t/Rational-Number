@@ -47,8 +47,8 @@ Output:
 ```
 5/4
 -1/4
-The Greatest Common Mivisor of 1/2 is: 1
-The Greatest Common Mivisor of 3/4 is: 12
+The Greatest Common Divisor of 1/2 is: 1
+The Least Common Multiple of 3/4 is: 12
 ```
 
 ---
